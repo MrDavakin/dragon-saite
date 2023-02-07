@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>guess</title>
+</head>
+<body>
+<script type="text/javascript">
+	let min=+prompt("min?",0)
+	let max=+prompt("max?",100)
+	let numUser;
+	let numX=min+Math.round(Math.random()*(max-min));
+	let  count=0;
+	do {numUser = prompt("Вгадайте число від " + min +" до " +max, "");
+	count++;
+	if (numUser===null){
+		alert("Ми чекали від Вас число");
+} else if (+numUser<numX){
+		alert("Ваше число менше");
+} else if (+numUser>numX){
+	alert("Ваше чилсо більше");
+} else {
+	alert("Ура!!! Вгадали!!!"+numX+"спроб: "+count); }
+} while (numUser != numX && numUser != null);
+
+</script>
+</body>
+</html>
